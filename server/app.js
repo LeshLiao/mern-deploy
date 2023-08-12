@@ -6,7 +6,7 @@ require("dotenv").config();
 
 // middleware
 const corsOptions = {
-    origin: "http://localhost:3000"
+    origin: "https://mern-deploy-frontend-levi.onrender.com"
 }
 
 app.use(express.json());
