@@ -1,11 +1,16 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const cors = require("cors");
 require("dotenv").config();
 
 // middleware
-app.use(express.json());
+const corsOptions = {
+    origin: "http://localhost:3000"
+}
 
+app.use(express.json());
+app.use(cors(corsOptions));
 
 
 // connect MongoDB
